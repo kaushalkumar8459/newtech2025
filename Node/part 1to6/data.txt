@@ -1,0 +1,1 @@
+{"homedir":"C:\\Users\\kkumar37","hostName":"LIN-5CG136BCGV","platform":"win32"}
