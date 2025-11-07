@@ -3,16 +3,16 @@
 > From absolute beginner to production-ready React Engineer with real-world projects and storytelling approach.
 
 ## 📚 Table of Contents
-- [Quick Setup](#quick-setup)
-- [Course Resources](#course-resources)
-- [Introduction to React](#introduction-to-react)
-- [Library vs Framework](#library-vs-framework)
-- [Virtual DOM vs Real DOM](#virtual-dom-vs-real-dom)
-- [JSX - JavaScript XML](#jsx---javascript-xml)
-- [SPA vs MPA](#spa-vs-mpa)
-- [Why React Dominates the Frontend World](#why-react-dominates-the-frontend-world)
-- [Prerequisites & Setup](#prerequisites--setup)
-- [Complete Course Syllabus](#complete-course-syllabus)
+- [🚀 Quick Setup](#-quick-setup)
+- [📖 Course Resources](#-course-resources)
+- [🌱 Introduction to React](#-introduction-to-react)
+- [📚 Library vs Framework](#-library-vs-framework)
+- [🌐 Virtual DOM vs Real DOM](#-virtual-dom-vs-real-dom)
+- [🎨 JSX - JavaScript XML](#-jsx---javascript-xml)
+- [📱 SPA vs MPA - Single Page vs Multi Page Applications](#-spa-vs-mpa---single-page-vs-multi-page-applications)
+- [🏆 Why React Dominates the Frontend World](#-why-react-dominates-the-frontend-world)
+- [⚙️ Prerequisites & Setup](#️-prerequisites--setup)
+- [🎯 Complete Course Syllabus](#-complete-course-syllabus)
 
 ---
 
