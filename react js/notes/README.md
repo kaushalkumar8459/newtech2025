@@ -1,0 +1,37 @@
+coding practice
+## code 1:- 
+function App(){
+  return "hello";
+}
+
+export default App
+
+## code 2:- 
+function App() {
+  // return "hello";
+  return (<div id="parent">
+    <h1 id="child_1">child 1 tag</h1>
+    <h1 id="child_2">child 2 tag</h1>
+  </div>)
+}
+
+export default App
+
+## code 3:- when we adding multiple tag inside return
+function App() {
+  // return "hello";
+  return (
+    <>
+      <div id="parent">
+        <h1 id="child_1">child 1 tag</h1>
+        <h1 id="child_2">child 2 tag</h1>
+      </div>
+      <div id="parent_2">
+        <h1 id="child_3">child 3 tag</h1>
+        <h1 id="child_4">child 4 tag</h1>
+      </div>
+    </>
+  )
+}
+
+export default App
