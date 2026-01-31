@@ -1,18 +1,14 @@
-function App() {
-  // return "hello";
-  return (
-    <>
-    <h1>practise - 1:06:32</h1>
-      <div id="parent">
-        <h1 id="child_1">child 1 tag</h1>
-        <h1 id="child_2">child 2 tag</h1>
-      </div>
-      <div id="parent_2">
-        <h1 id="child_3">child 3 tag</h1>
-        <h1 id="child_4">child 4 tag</h1>
-      </div>
-    </>
-  )
+import Footer from "./section-5-styling/footer/Footer"
+import Header from "./section-5-styling/header/Header"
+import TaskList from "./section-5-styling/taskList/TaskList"
+import "./App.css";
+
+const App = () => {
+  return (<>
+    <Header header='Header' logo="Logo" />
+    <TaskList />
+    <Footer footer='Footer' />
+  </>)
 }
 
 export default App
