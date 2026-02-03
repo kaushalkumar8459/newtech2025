@@ -1,0 +1,42 @@
+.icon-circle {
+  width: 42px;
+  height: 42px;
+  background: white;
+  color: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* .icon-circle:hover {
+  background: #adb5bd;
+} */
+
+.footer-link {
+  color: #adb5bd !important;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: white !important;
+}
+
+.fb:hover{
+    color: rgb(84, 84, 194);
+}
+
+.ig:hover{
+    color: rgb(204, 67, 8)
+}
+.tw:hover{
+    color: rgb(84, 84, 194);
+}
+.gl:hover{
+    color: rgb(179, 9, 120);
+}
+.you:hover{
+    color:rgb(222, 10, 10);
+}
