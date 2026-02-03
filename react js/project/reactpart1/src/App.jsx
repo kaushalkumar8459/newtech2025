@@ -8,9 +8,9 @@ import { useState } from "react";
 const App = () => {
 
   const [ArrayData, setArrayData] = useState([
-    { id: 1, title: "Learn React Hooks", completed: false },
-    { id: 2, title: "Build todo app", completed: true },
-    { id: 3, title: "Style dashboard", completed: false }
+    // { id: 1, name: "Learn React Hooks", completed: false },
+    // { id: 2, name: "Build todo app", completed: true },
+    // { id: 3, name: "Style dashboard", completed: false }
   ])
 
 
