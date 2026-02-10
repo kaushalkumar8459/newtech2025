@@ -1,26 +1,11 @@
-import { useEffect, useRef, useState } from 'react'
-import './ProductList.css'
-export const ProductList = () => {
-    const urlValue = 'http://localhost:3000/products'
-    const [ProductLists, setProductLists] = useState();
-    const [url, setUrl] = useState(urlValue);
+import { useRef, useState } from 'react'
+import './../ProductList.css'
+import { useFetch } from './useFetch'
+
+export const ProductListUseFetch = () => {
+    const [url, setUrl] = useState('http://localhost:3000/products');
     const inpValue = useRef(null)
-    const [counter, setCounter] = useState(0)
-
-    //we passed counter in same array, issue during counter chnage api will also trigger.
-    useEffect(() => {
-        console.log("counter value", counter);
-        console.log("Api data");
-
-        fetch(url)
-            .then((res) => res.json())
-            .then((data) => Array.isArray(data) ? setProductLists(data) : setProductLists([data])
-            )
-    }, [url])
-
-    useEffect(() => {
-        console.log("counter changed", counter);
-    }, [counter])
+    const { data: ProductLists } = useFetch(url);
 
     function SearchById() {
         setUrl(`${urlValue}/${inpValue.current.value}`)
@@ -34,17 +19,10 @@ export const ProductList = () => {
         setUrl(`${urlValue}?in_stock=true`)
     }
 
-    function handleCounter(params) {
-        setCounter(counter + 1)
-    }
-
 
     return (<>
-
-        <button onClick={handleCounter}>Counter {counter}</button> &nbsp;&nbsp;&nbsp;
-
         <button onClick={allProduct}>All Product</button> &nbsp;&nbsp;&nbsp;
-        <button onClick={productInStock}>Product In Stock</button> 
+        <button onClick={productInStock}>Product In Stock</button>
         <br />
         <br />
         <div>
@@ -63,7 +41,7 @@ export const ProductList = () => {
             </thead>
 
             <tbody>
-                {ProductLists?.map((product) => {
+                {ProductLists && ProductLists?.map((product) => {
                     return (
                         <tr key={product.id}>
                             <td>{product.id}</td>

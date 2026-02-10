@@ -1,10 +1,12 @@
 import "./App.css";
-import { ProductList } from "./component/productList";
+import { ProductListUseFetch } from "./component/customHook/ProductListUseFetch";
+// import { ProductListUseCallBack } from "./component/ProductListUseCallBack";
 
 const App = () => {
 
   return (<>
-    <ProductList />
+    {/* <ProductListUseCallBack /> */}
+    <ProductListUseFetch />
   </>)
 }
 

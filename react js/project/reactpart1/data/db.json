@@ -1,15 +1,15 @@
 {
   "products": [
-    { "id": "1", "title": "Wireless Headphones", "price": 79.99, "category": "Electronics", "views": 450, "stock": 25, "rating": 4.5 },
-    { "id": "2", "title": "USB-C Charging Cable", "price": 12.99, "category": "Accessories", "views": 820, "stock": 100, "rating": 4.8 },
-    { "id": "3", "title": "Laptop Stand", "price": 49.99, "category": "Office", "views": 320, "stock": 15, "rating": 4.3 },
-    { "id": "4", "title": "Mechanical Keyboard", "price": 129.99, "category": "Electronics", "views": 680, "stock": 30, "rating": 4.7 },
-    { "id": "5", "title": "Portable Phone Charger", "price": 34.99, "category": "Accessories", "views": 1200, "stock": 50, "rating": 4.6 },
-    { "id": "6", "title": "Desk Lamp LED", "price": 39.99, "category": "Office", "views": 275, "stock": 20, "rating": 4.4 },
-    { "id": "7", "title": "4K USB Webcam", "price": 89.99, "category": "Electronics", "views": 540, "stock": 12, "rating": 4.5 },
-    { "id": "8", "title": "Mouse Pad Extended", "price": 24.99, "category": "Accessories", "views": 650, "stock": 45, "rating": 4.2 },
-    { "id": "9", "title": "Monitor Stand Adjustable", "price": 59.99, "category": "Office", "views": 420, "stock": 18, "rating": 4.6 },
-    { "id": "10", "title": "Bluetooth Speaker Portable", "price": 69.99, "category": "Electronics", "views": 920, "stock": 35, "rating": 4.8 }
+    { "id": "1", "title": "Wireless Headphones", "price": 79.99, "category": "Electronics", "views": 450, "stock": 25, "rating": 4.5,"in_stock":true },
+    { "id": "2", "title": "USB-C Charging Cable", "price": 12.99, "category": "Accessories", "views": 820, "stock": 100, "rating": 4.8,"in_stock":true },
+    { "id": "3", "title": "Laptop Stand", "price": 49.99, "category": "Office", "views": 320, "stock": 15, "rating": 4.3,"in_stock":false },
+    { "id": "4", "title": "Mechanical Keyboard", "price": 129.99, "category": "Electronics", "views": 680, "stock": 30, "rating": 4.7,"in_stock":false },
+    { "id": "5", "title": "Portable Phone Charger", "price": 34.99, "category": "Accessories", "views": 1200, "stock": 50, "rating": 4.6,"in_stock":true },
+    { "id": "6", "title": "Desk Lamp LED", "price": 39.99, "category": "Office", "views": 275, "stock": 20, "rating": 4.4 ,"in_stock":true},
+    { "id": "7", "title": "4K USB Webcam", "price": 89.99, "category": "Electronics", "views": 540, "stock": 12, "rating": 4.5 ,"in_stock":false},
+    { "id": "8", "title": "Mouse Pad Extended", "price": 24.99, "category": "Accessories", "views": 650, "stock": 45, "rating": 4.2 ,"in_stock":false},
+    { "id": "9", "title": "Monitor Stand Adjustable", "price": 59.99, "category": "Office", "views": 420, "stock": 18, "rating": 4.6 ,"in_stock":true},
+    { "id": "10", "title": "Bluetooth Speaker Portable", "price": 69.99, "category": "Electronics", "views": 920, "stock": 35, "rating": 4.8 ,"in_stock":true}
   ],
   "comments": [
     { "id": "1", "text": "a comment about post 1", "postId": "1" },

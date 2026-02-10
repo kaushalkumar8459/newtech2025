@@ -1,6 +1,6 @@
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import './ProductList.css'
-export const ProductList = () => {
+export const ProductListUseCallBack = () => {
     const urlValue = 'http://localhost:3000/products'
     const [ProductLists, setProductLists] = useState();
     const [url, setUrl] = useState(urlValue);
@@ -8,15 +8,34 @@ export const ProductList = () => {
     const [counter, setCounter] = useState(0)
 
     //we passed counter in same array, issue during counter chnage api will also trigger.
-    useEffect(() => {
-        console.log("counter value", counter);
-        console.log("Api data");
 
-        fetch(url)
-            .then((res) => res.json())
-            .then((data) => Array.isArray(data) ? setProductLists(data) : setProductLists([data])
-            )
+    // ways 1:- when function will be inside useeffect, we can follow below approach.
+    // useEffect(() => {
+    //     async function fetchProducts() {
+    //         const response = await fetch(url);
+    //         const data = await response.json();
+    //         Array.isArray(data) ? setProductLists(data) : setProductLists([data])
+    //     }
+    //     fetchProducts()
+    // }, [url])
+
+    // useEffect(() => {
+    //     fetchProducts()
+    // }, [])
+
+    // ways 2:- when function is outside of useeffect, in that scenario write async function inside useCallBack
+    const fetchProducts = useCallback(async () => {
+        const response = await fetch(url);
+        const data = await response.json();
+        Array.isArray(data) ? setProductLists(data) : setProductLists([data])
     }, [url])
+
+    useEffect(() => {
+        fetchProducts();
+    }, [fetchProducts])
+
+
+
 
     useEffect(() => {
         console.log("counter changed", counter);
@@ -44,7 +63,7 @@ export const ProductList = () => {
         <button onClick={handleCounter}>Counter {counter}</button> &nbsp;&nbsp;&nbsp;
 
         <button onClick={allProduct}>All Product</button> &nbsp;&nbsp;&nbsp;
-        <button onClick={productInStock}>Product In Stock</button> 
+        <button onClick={productInStock}>Product In Stock</button>
         <br />
         <br />
         <div>
