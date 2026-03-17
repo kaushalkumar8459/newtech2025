@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Webcam Photo Capture</title>
+  <style>
+    video, canvas {
+      border: 1px solid #444;
+      display: block;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Camera Test & Photo Capture</h2>
+
+  <video id="video" width="400" height="300" autoplay></video>
+
+  <button id="captureBtn">Capture Photo</button>
+
+  <h3>Captured Photo:</h3>
+  <canvas id="canvas" width="400" height="300"></canvas>
+
+  <script>
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+    const captureBtn = document.getElementById('captureBtn');
+    const ctx = canvas.getContext('2d');
+
+    async function startCamera() {
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+        video.srcObject = stream;
+      } catch (err) {
+        alert("Camera access denied: " + err.message);
+      }
+    }
+
+    captureBtn.addEventListener('click', () => {
+      ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+    });
+
+    startCamera();
+  </script>
+</body>
+</html>

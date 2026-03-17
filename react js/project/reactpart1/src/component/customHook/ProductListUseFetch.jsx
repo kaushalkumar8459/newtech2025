@@ -5,7 +5,7 @@ import { useFetch } from './useFetch'
 export const ProductListUseFetch = () => {
     const [url, setUrl] = useState('http://localhost:3000/products');
     const inpValue = useRef(null)
-    const { data: ProductLists } = useFetch(url);
+    const { data: ProductLists, loading } = useFetch(url);
 
     function SearchById() {
         setUrl(`${urlValue}/${inpValue.current.value}`)
@@ -31,27 +31,33 @@ export const ProductListUseFetch = () => {
         </div>
         <br />
 
-        <table>
-            <thead style={{ color: "red" }}>
-                <tr>
-                    <th>Id</th>
-                    <th>Title</th>
-                    <th>Stock</th>
-                </tr>
-            </thead>
+        <div>
+            {loading && <p>Product loading....</p>}
 
-            <tbody>
-                {ProductLists && ProductLists?.map((product) => {
-                    return (
-                        <tr key={product.id}>
-                            <td>{product.id}</td>
-                            <td>{product.title}</td>
-                            <td>{product.stock}</td>
-                        </tr>
-                    )
-                })}
-            </tbody>
-        </table>
+        </div>
+
+        {!loading &&
+            <table>
+                <thead style={{ color: "red" }}>
+                    <tr>
+                        <th>Id</th>
+                        <th>Title</th>
+                        <th>Stock</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    {ProductLists && ProductLists?.map((product) => {
+                        return (
+                            <tr key={product.id}>
+                                <td>{product.id}</td>
+                                <td>{product.title}</td>
+                                <td>{product.stock}</td>
+                            </tr>
+                        )
+                    })}
+                </tbody>
+            </table>}
     </>
     )
 }
